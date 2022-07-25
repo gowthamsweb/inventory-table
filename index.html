@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Table</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS File Attachement -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body>
+    <h1>Inventory Table</h1>
+    <div class="pages-selection-container">
+      <div class="no-of-rows-container">
+        <h5>Select Number Of Rows</h5>
+        <div class="form-group">
+          <!--		Show Numbers Of Rows 		-->
+          <select name="state" id="maxRows">
+            <option value="5000">Show ALL Rows</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="70">70</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+      </div>
+      <div class="pagination-container">
+        <nav>
+          <ul class="pagination">
+            <li data-page="prev" id="next" class="page-item">
+              <a href="#" class="page-link"><span> &#139; </span></a>
+            </li>
+            <!--	Here the JS Function Will Add the Rows -->
+            <li data-page="next" id="prev" class="page-item">
+              <a href="#" class="page-link"><span> &#155; </span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Inventory Table -->
+    <div class="table-container">
+      <table class="inventory-table" id="table-id">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- jquery file attachment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap Script link attachment -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Pagination JavaScript file attachment -->
+    <script src="./js/pagination.js"></script>
+    <!-- Dynamic data updation of table from csv file input attachment -->
+    <script src="./js/tableData.js"></script>
+  </body>
+</html>
+
